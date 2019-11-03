@@ -2,7 +2,7 @@
 using System.Linq;
 using UnityEngine;
 
-namespace KeelPlugins
+namespace HideAllUI
 {
     internal class HideHSceneUI : HideUIAction
     {

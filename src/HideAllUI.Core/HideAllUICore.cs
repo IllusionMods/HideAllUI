@@ -4,7 +4,7 @@ using BepInEx.Harmony;
 using HarmonyLib;
 using UnityEngine;
 
-namespace KeelPlugins
+namespace HideAllUI
 {
     public class HideAllUICore : BaseUnityPlugin
     {

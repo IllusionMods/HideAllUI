@@ -1,4 +1,4 @@
-﻿namespace KeelPlugins
+﻿namespace HideAllUI
 {
     internal abstract class HideUIAction
     {

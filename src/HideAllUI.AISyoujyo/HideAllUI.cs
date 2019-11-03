@@ -2,7 +2,7 @@
 using HarmonyLib;
 using UnityEngine;
 
-namespace KeelPlugins
+namespace HideAllUI
 {
     [BepInPlugin(GUID, "HideAllUI", Version)]
     public class HideAllUI : HideAllUICore

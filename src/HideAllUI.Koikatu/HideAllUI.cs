@@ -7,7 +7,7 @@ using System.Linq;
 using System.Reflection.Emit;
 using UnityEngine;
 
-namespace KeelPlugins
+namespace HideAllUI
 {
     [BepInIncompatibility("HideStudioUI")]
     [BepInIncompatibility("HideHInterface")]
