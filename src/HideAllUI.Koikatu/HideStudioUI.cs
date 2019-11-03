@@ -6,7 +6,7 @@ namespace HideAllUI
 {
     internal class HideStudioUI : HideUIAction
     {
-        private string[] targets = new[] { "Canvas", "Canvas Object List", "Canvas Main Menu", "Canvas Frame cap", "Canvas System Menu", "Canvas Guide Input", "CvsColor" };
+        private string[] targets = new[] { "Canvas", "Canvas Object List", "Canvas Main Menu", "Canvas Frame Cap", "Canvas System Menu", "Canvas Guide Input", "CvsColor", "Canvas Pattern" };
         private IEnumerable<Canvas> canvasList;
         private bool visible = true;
 
