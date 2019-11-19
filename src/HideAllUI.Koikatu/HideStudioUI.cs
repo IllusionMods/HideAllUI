@@ -20,6 +20,12 @@ namespace HideAllUI
             visible = !visible;
             foreach(var canvas in canvasList.Where(x => x))
                 canvas.gameObject.SetActive(visible);
+
+            var kkpecanvas = GameObject.Find("KKPECanvas(Clone)")?.GetComponent<Canvas>();
+            if (kkpecanvas != null) kkpecanvas.enabled = visible;
+
+            var qabcanvas = GameObject.Find("QuickAccessBoxCanvas(Clone)")?.GetComponent<Canvas>();
+            if (qabcanvas != null) qabcanvas.enabled = visible;
         }
     }
 }
