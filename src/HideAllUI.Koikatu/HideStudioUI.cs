@@ -6,7 +6,7 @@ namespace HideAllUI
 {
     internal class HideStudioUI : HideUIAction
     {
-        private string[] gameCanviNames = { "Canvas", "Canvas Object List", "Canvas Main Menu", "Canvas Frame Cap", "Canvas System Menu", "Canvas Guide Input", "CvsColor", "Canvas Pattern" };
+        private string[] gameCanviNames = { "Canvas", "Canvas Object List", "Canvas Main Menu", "Canvas System Menu", "Canvas Guide Input", "CvsColor", "Canvas Pattern" };
         private string[] pluginCanviNames = { "KKPECanvas(Clone)", "BepInEx_Manager/MaterialEditorCanvas", "QuickAccessBoxCanvas(Clone)" };
 
         private IEnumerable<Canvas> canvasList;
