@@ -14,8 +14,6 @@ namespace HideAllUI
     [BepInPlugin(GUID, "HideAllUI", Version)]
     public class HideAllUI : HideAllUICore
     {
-        public const string Version = "1.0.0";
-
         private static bool HotkeyIsDown() => HideHotkey.Value.IsDown();
 
         private class Hooks

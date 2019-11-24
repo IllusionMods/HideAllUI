@@ -9,6 +9,7 @@ namespace HideAllUI
     public class HideAllUICore : BaseUnityPlugin
     {
         public const string GUID = "keelhauled.hideallui";
+        public const string Version = "2.0";
 
         // must be static for the transpiler
         protected static ConfigEntry<KeyboardShortcut> HideHotkey { get; set; }
