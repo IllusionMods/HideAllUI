@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using HarmonyLib;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -10,7 +11,6 @@ namespace HideAllUI
         private string[] pluginCanviNames = { "KKPECanvas(Clone)", "BepInEx_Manager/MaterialEditorCanvas", "QuickAccessBoxCanvas(Clone)" };
 
         private IEnumerable<Canvas> canvasList;
-
         private bool visible = true;
 
         public HideStudioUI()
@@ -21,14 +21,20 @@ namespace HideAllUI
         public override void ToggleUI()
         {
             visible = !visible;
-            foreach (var canvas in canvasList.Where(x => x))
+            foreach(var canvas in canvasList.Where(x => x))
                 canvas.gameObject.SetActive(visible);
 
-            foreach (var objectName in pluginCanviNames)
+            foreach(var objectName in pluginCanviNames)
             {
                 var canvas = GameObject.Find(objectName)?.GetComponent<Canvas>();
-                if (canvas != null) canvas.enabled = visible;
+                if(canvas != null) canvas.enabled = visible;
             }
+        }
+
+        [HarmonyPostfix, HarmonyPatch(typeof(Studio.Studio), "Init")]
+        private static void StudioInit()
+        {
+            HideAllUICore.currentUIHandler = new HideStudioUI();
         }
     }
 }
