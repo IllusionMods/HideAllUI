@@ -1,5 +1,6 @@
 ﻿using BepInEx;
 using BepInEx.Harmony;
+using System.Threading;
 using UnityEngine.SceneManagement;
 
 namespace HideAllUI
@@ -16,7 +17,7 @@ namespace HideAllUI
             if(SceneManager.GetActiveScene().name == "StudioStart")
                 HarmonyWrapper.PatchAll(typeof(HideStudioUI));
             else
-                ThreadingHelper.Instance.StartAsyncInvoke(() => { HarmonyWrapper.PatchAll(typeof(HideHSceneUI)); return null; });
+                HarmonyWrapper.PatchAll(typeof(HideHSceneUI));
         }
     }
 }
