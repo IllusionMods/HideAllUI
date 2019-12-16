@@ -1,6 +1,5 @@
 ﻿using BepInEx;
 using BepInEx.Harmony;
-using System.Threading;
 using UnityEngine.SceneManagement;
 
 namespace HideAllUI
