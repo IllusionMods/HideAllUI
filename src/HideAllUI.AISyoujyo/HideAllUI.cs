@@ -1,4 +1,5 @@
 ﻿using BepInEx;
+using BepInEx.Harmony;
 using HarmonyLib;
 using UnityEngine;
 
@@ -7,6 +8,12 @@ namespace HideAllUI
     [BepInPlugin(GUID, "HideAllUI", Version)]
     public class HideAllUI : HideAllUICore
     {
+        protected override void Awake()
+        {
+            base.Awake();
+            HarmonyWrapper.PatchAll(typeof(Hooks));
+        }
+
         private class Hooks
         {
             [HarmonyPostfix, HarmonyPatch(typeof(CharaCustom.CharaCustom), "Start")]
