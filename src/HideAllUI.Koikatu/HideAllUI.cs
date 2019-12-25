@@ -6,7 +6,7 @@ namespace HideAllUI
 {
     [BepInIncompatibility("HideStudioUI")]
     [BepInIncompatibility("HideHInterface")]
-    [BepInPlugin(GUID, "HideAllUI", Version)]
+    [BepInPlugin(GUID, PluginName, Version)]
     public class HideAllUI : HideAllUICore
     {
         protected override void Awake()

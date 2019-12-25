@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("HideAllUI.Koikatu")]
+[assembly: AssemblyTitle("HideAllUI.PlayHome")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("HideAllUI.Koikatu")]
+[assembly: AssemblyProduct("HideAllUI.PlayHome")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("7b61e051-ba51-4285-b320-a88e2573f50d")]
+[assembly: Guid("60bb7ba9-cde0-427a-aa68-fcf5eab8b5ca")]
 
 // Version information for an assembly consists of the following four values:
 //
