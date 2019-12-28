@@ -3,6 +3,10 @@ using BepInEx.Configuration;
 using BepInEx.Logging;
 using UnityEngine;
 using HarmonyLib;
+using System.Collections.Generic;
+using System.Linq;
+using System;
+using System.Reflection.Emit;
 
 namespace HideAllUI
 {
@@ -17,6 +21,7 @@ namespace HideAllUI
 
         // must be static for the transpiler
         internal static ConfigEntry<KeyboardShortcut> HideHotkey { get; set; }
+        private static bool HotkeyIsDown() => HideHotkey.Value.IsDown();
 
         internal static HideUIAction currentUIHandler;
 
@@ -31,6 +36,34 @@ namespace HideAllUI
         {
             if(currentUIHandler != null && HideHotkey.Value.IsDown())
                 currentUIHandler.ToggleUI();
+        }
+
+#if DEBUG
+        private void OnDestroy()
+        {
+            Harmony.UnpatchAll();
+        } 
+#endif
+
+        internal static IEnumerable<CodeInstruction> HideHotkeyHook(IEnumerable<CodeInstruction> instructions)
+        {
+            var codes = instructions.ToList();
+            var inputGetKeyDown = AccessTools.Method(typeof(Input), nameof(Input.GetKeyDown), new Type[] { typeof(KeyCode) });
+
+            for(int i = 0; i < codes.Count; i++)
+            {
+                if(codes[i].opcode == OpCodes.Ldc_I4_S && codes[i].operand is sbyte val && val == (sbyte)KeyCode.Space)
+                {
+                    if(codes[i + 1].opcode == OpCodes.Call && codes[i + 1].operand == inputGetKeyDown)
+                    {
+                        codes[i].opcode = OpCodes.Nop;
+                        codes[i + 1] = new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(HideAllUICore), nameof(HotkeyIsDown)));
+                        break;
+                    }
+                }
+            }
+
+            return codes;
         }
     }
 }
