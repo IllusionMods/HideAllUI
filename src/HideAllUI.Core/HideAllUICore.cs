@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System;
 using System.Reflection.Emit;
+using System.Reflection;
 
 namespace HideAllUI
 {
@@ -54,7 +55,7 @@ namespace HideAllUI
             {
                 if(codes[i].opcode == OpCodes.Ldc_I4_S && codes[i].operand is sbyte val && val == (sbyte)KeyCode.Space)
                 {
-                    if(codes[i + 1].opcode == OpCodes.Call && codes[i + 1].operand == inputGetKeyDown)
+                    if(codes[i + 1].opcode == OpCodes.Call && codes[i + 1].operand is MethodInfo methodInfo && methodInfo == inputGetKeyDown)
                     {
                         codes[i].opcode = OpCodes.Nop;
                         codes[i + 1] = new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(HideAllUICore), nameof(HotkeyIsDown)));

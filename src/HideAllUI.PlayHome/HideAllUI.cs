@@ -7,8 +7,6 @@ namespace HideAllUI
     [BepInPlugin(GUID, PluginName, Version)]
     public class HideAllUI : HideAllUICore
     {
-        private static bool HotkeyIsDown() => HideHotkey.Value.IsDown();
-
         protected override void Awake()
         {
             base.Awake();

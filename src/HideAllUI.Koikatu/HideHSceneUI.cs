@@ -13,8 +13,6 @@ namespace HideAllUI
         private IEnumerable<Canvas> canvasList;
         private bool visible = true;
 
-        private static bool HotkeyIsDown() => HideAllUICore.HideHotkey.Value.IsDown();
-
         public HideHSceneUI()
         {
             canvasList = GameObject.FindObjectsOfType<Canvas>().Where(x => x.name == "Canvas");
