@@ -34,12 +34,6 @@ namespace HideAllUI
                 currentUIHandler = new HideStudioUI();
             }
             
-            [HarmonyPostfix, HarmonyPatch(typeof(Studio.Studio), "OnApplicationQuit")]
-            public static void StudioEnd()
-            {
-                currentUIHandler = null;
-            }
-            
             [HarmonyPrefix, HarmonyPatch(typeof(HScene), "SetStartVoice")]
             public static void HSceneStart(HScene __instance)
             {
