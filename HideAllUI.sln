@@ -11,9 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HideAllUI.Koikatu", "src\Hi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HideAllUI.PlayHome", "src\HideAllUI.PlayHome\HideAllUI.PlayHome.csproj", "{60BB7BA9-CDE0-427A-AA68-FCF5EAB8B5CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HideAllUI.HoneySelect2", "src\HideAllUI.HoneySelect2\HideAllUI.HoneySelect2.csproj", "{751A16AC-7ACD-40D1-917E-FD1D588996B7}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		src\HideAllUI.Core\HideAllUI.Core.projitems*{60bb7ba9-cde0-427a-aa68-fcf5eab8b5ca}*SharedItemsImports = 4
+		src\HideAllUI.Core\HideAllUI.Core.projitems*{751a16ac-7acd-40d1-917e-fd1d588996b7}*SharedItemsImports = 4
 		src\HideAllUI.Core\HideAllUI.Core.projitems*{7b61e051-ba51-4285-b320-a88e2573f50d}*SharedItemsImports = 4
 		src\HideAllUI.Core\HideAllUI.Core.projitems*{bef5b8f5-e977-4190-b793-0f8b349dd9ae}*SharedItemsImports = 4
 		src\HideAllUI.Core\HideAllUI.Core.projitems*{fe4aa260-c540-4842-b0da-9b2f76efe688}*SharedItemsImports = 13
@@ -35,6 +38,10 @@ Global
 		{60BB7BA9-CDE0-427A-AA68-FCF5EAB8B5CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60BB7BA9-CDE0-427A-AA68-FCF5EAB8B5CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60BB7BA9-CDE0-427A-AA68-FCF5EAB8B5CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{751A16AC-7ACD-40D1-917E-FD1D588996B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{751A16AC-7ACD-40D1-917E-FD1D588996B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{751A16AC-7ACD-40D1-917E-FD1D588996B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{751A16AC-7ACD-40D1-917E-FD1D588996B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
