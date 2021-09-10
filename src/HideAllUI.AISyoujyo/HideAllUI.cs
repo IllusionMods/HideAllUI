@@ -1,5 +1,4 @@
 ﻿using BepInEx;
-using BepInEx.Harmony;
 using HarmonyLib;
 using UnityEngine;
 
@@ -11,7 +10,7 @@ namespace HideAllUI
         protected override void Awake()
         {
             base.Awake();
-            HarmonyWrapper.PatchAll(typeof(Hooks));
+            Harmony.PatchAll(typeof(Hooks));
         }
 
         private class Hooks

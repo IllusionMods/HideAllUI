@@ -1,5 +1,4 @@
 ﻿using BepInEx;
-using BepInEx.Harmony;
 using ChaCustom;
 using HarmonyLib;
 using UnityEngine.SceneManagement;
@@ -16,10 +15,10 @@ namespace HideAllUI
             base.Awake();
 
             if(SceneManager.GetActiveScene().name == "StudioStart")
-                HarmonyWrapper.PatchAll(typeof(HideStudioUI));
+                Harmony.PatchAll(typeof(HideStudioUI));
             else
             {
-                HarmonyWrapper.PatchAll(typeof(HideHSceneUI));
+                Harmony.PatchAll(typeof(HideHSceneUI));
                 Harmony.Patch(typeof(CustomControl).GetMethod("Update", AccessTools.all),
                               transpiler: new HarmonyMethod(typeof(HideAllUICore).GetMethod(nameof(HideAllUICore.HideHotkeyHook), AccessTools.all)));
             }
