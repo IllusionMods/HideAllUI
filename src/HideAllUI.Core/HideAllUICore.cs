@@ -15,7 +15,7 @@ namespace HideAllUI
     {
         public const string GUID = "keelhauled.hideallui";
         public const string PluginName = "HideAllUI";
-        public const string Version = "2.2.0";
+        public const string Version = "2.3";
 
         internal new static ManualLogSource Logger;
         internal static Harmony Harmony;
