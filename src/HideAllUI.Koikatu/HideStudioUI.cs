@@ -21,13 +21,19 @@ namespace HideAllUI
         public override void ToggleUI()
         {
             visible = !visible;
-            foreach(var canvas in canvasList.Where(x => x))
+            foreach (var canvas in canvasList.Where(x => x))
                 canvas.gameObject.SetActive(visible);
 
-            foreach(var objectName in pluginCanviNames)
+            foreach (var objectName in pluginCanviNames)
             {
                 var canvas = GameObject.Find(objectName)?.GetComponent<Canvas>();
-                if(canvas != null) canvas.enabled = visible;
+                if (canvas != null) canvas.enabled = visible;
+            }
+
+            if (Camera.main != null)
+            {
+                var extragizmo = Camera.main.transform.Find("CustomManipulatorGizmo");
+                if (extragizmo != null) extragizmo.gameObject.SetActive(visible);
             }
         }
 
