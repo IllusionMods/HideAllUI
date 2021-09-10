@@ -1,4 +1,4 @@
-$array = @("HideAllUI.AISyoujyo", "HideAllUI.HoneySelect2", "HideAllUI.Koikatu", "HideAllUI.PlayHome")
+$array = @("HideAllUI.AISyoujyo", "HideAllUI.HoneySelect2", "HideAllUI.Koikatu", "HideAllUI.PlayHome", "HideAllUI.KoikatsuSunshine")
 
 if ($PSScriptRoot -match '.+?\\bin\\?') {
     $dir = $PSScriptRoot + "\"
