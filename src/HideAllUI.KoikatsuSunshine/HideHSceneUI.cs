@@ -10,19 +10,12 @@ namespace HideAllUI
 {
     internal class HideHSceneUI : HideUIAction
     {
-        private IEnumerable<Canvas> canvasList;
         private bool visible = true;
-
-        public HideHSceneUI()
-        {
-            canvasList = GameObject.FindObjectsOfType<Canvas>().Where(x => x.name == "Canvas");
-        }
 
         public override void ToggleUI()
         {
             visible = !visible;
-            foreach(var canvas in canvasList.Where(x => x))
-                canvas.enabled = visible;
+            GameObject.FindObjectOfType<HSprite>().GetComponent<Canvas>().enabled = visible;
         }
 
         [HarmonyPrefix, HarmonyPatch(typeof(HSceneProc), "SetShortcutKey")]
