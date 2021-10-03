@@ -1,12 +1,9 @@
 ﻿using BepInEx;
 using ChaCustom;
 using HarmonyLib;
-using UnityEngine.SceneManagement;
 
 namespace HideAllUI
 {
-    [BepInIncompatibility("HideStudioUI")]
-    [BepInIncompatibility("HideHInterface")]
     [BepInPlugin(GUID, PluginName, Version)]
     public class HideAllUI : HideAllUICore
     {
@@ -14,7 +11,7 @@ namespace HideAllUI
         {
             base.Awake();
 
-            if(SceneManager.GetActiveScene().name == "StudioStart")
+            if(UnityEngine.Application.productName == "CharaStudio")
                 Harmony.PatchAll(typeof(HideStudioUI));
             else
             {
