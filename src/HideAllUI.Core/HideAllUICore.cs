@@ -14,8 +14,8 @@ namespace HideAllUI
     public abstract class HideAllUICore : BaseUnityPlugin
     {
         public const string GUID = "keelhauled.hideallui";
-        public const string PluginName = "HideAllUI";
-        public const string Version = "2.3.2";
+        public const string PluginName = Constants.Name;
+        public const string Version = Constants.Version;
 
         internal new static ManualLogSource Logger;
         internal static Harmony Harmony;

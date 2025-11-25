@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29613.14
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36717.8 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HideAllUI.AISyoujyo", "src\HideAllUI.AISyoujyo\HideAllUI.AISyoujyo.csproj", "{BEF5B8F5-E977-4190-B793-0F8B349DD9AE}"
 EndProject
@@ -15,15 +15,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HideAllUI.HoneySelect2", "s
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HideAllUI.KoikatsuSunshine", "src\HideAllUI.KoikatsuSunshine\HideAllUI.KoikatsuSunshine.csproj", "{A66379B2-2909-4A61-868B-58AB77785B17}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Solution", "_Solution", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		src\HideAllUI.Core\HideAllUI.Core.projitems*{60bb7ba9-cde0-427a-aa68-fcf5eab8b5ca}*SharedItemsImports = 4
-		src\HideAllUI.Core\HideAllUI.Core.projitems*{751a16ac-7acd-40d1-917e-fd1d588996b7}*SharedItemsImports = 4
-		src\HideAllUI.Core\HideAllUI.Core.projitems*{7b61e051-ba51-4285-b320-a88e2573f50d}*SharedItemsImports = 4
-		src\HideAllUI.Core\HideAllUI.Core.projitems*{a66379b2-2909-4a61-868b-58ab77785b17}*SharedItemsImports = 4
-		src\HideAllUI.Core\HideAllUI.Core.projitems*{bef5b8f5-e977-4190-b793-0f8b349dd9ae}*SharedItemsImports = 4
-		src\HideAllUI.Core\HideAllUI.Core.projitems*{fe4aa260-c540-4842-b0da-9b2f76efe688}*SharedItemsImports = 13
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -55,5 +53,13 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {93DBCB96-95D6-4731-80A5-5437E32E546A}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		src\HideAllUI.Core\HideAllUI.Core.projitems*{60bb7ba9-cde0-427a-aa68-fcf5eab8b5ca}*SharedItemsImports = 5
+		src\HideAllUI.Core\HideAllUI.Core.projitems*{751a16ac-7acd-40d1-917e-fd1d588996b7}*SharedItemsImports = 5
+		src\HideAllUI.Core\HideAllUI.Core.projitems*{7b61e051-ba51-4285-b320-a88e2573f50d}*SharedItemsImports = 5
+		src\HideAllUI.Core\HideAllUI.Core.projitems*{a66379b2-2909-4a61-868b-58ab77785b17}*SharedItemsImports = 5
+		src\HideAllUI.Core\HideAllUI.Core.projitems*{bef5b8f5-e977-4190-b793-0f8b349dd9ae}*SharedItemsImports = 5
+		src\HideAllUI.Core\HideAllUI.Core.projitems*{fe4aa260-c540-4842-b0da-9b2f76efe688}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal
